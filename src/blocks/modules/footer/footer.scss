@@ -1,0 +1,99 @@
+.footer-wrp {
+    background: #f2f2f2;
+    padding: 60px 0;
+}
+
+.top-footer {
+    display: flex;
+    flex-wrap: wrap;
+    .copy {
+        @include size(2);
+        text-transform: uppercase;
+        font-size: 14px;
+        margin: auto 0;
+    }
+    .phone {
+        margin: auto 0 auto auto;
+        font-weight: 700;
+        font-size: 21px;
+        color: $red-color;
+    }
+    nav {
+        margin: auto 0;
+        ul {
+            display: flex;
+            padding: 0;
+            list-style: none;
+            text-transform: uppercase;
+            li {
+                margin: 0 20px;
+                font-weight: 700;
+                font-size: 14px;
+                a {
+                    color: $black-color;
+                }
+            }
+        }
+    }
+  @media screen and (max-width: 1200px){
+    flex-direction: column-reverse;
+    text-align: center;
+    .phone {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .navigation {
+      width: 100%;
+      ul {
+        justify-content: center;
+      }
+    }
+    .copy {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .navigation {
+      ul {
+        flex-direction: column;
+        li {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.bot-footer {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    .address {
+        @include shift-padding-left(1.75);
+        font-size: 14px;
+    }
+
+    .mail {
+        margin: auto 0 auto auto;
+    }
+
+  @media screen and (max-width: 1200px) {
+    text-align: center;
+    .address {
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .mail {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .address {
+      width: 100%;
+    }
+  }
+}

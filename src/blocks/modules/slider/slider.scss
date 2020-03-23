@@ -1,0 +1,94 @@
+@import "../../../styles/variables";
+
+.slider {
+
+    @media screen and (max-width: 690px) {
+        display: none;
+    }
+    .slider-item {
+        position: relative;
+
+        .slider-content {
+
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 9% 0;
+            color: #fff;
+
+            @media screen and (max-width: 1200px) {
+                padding: 30px 0;
+            }
+
+            @media screen and (max-width: 930px) {
+                h2 {
+                    font-size: 36px;
+                }
+                h5 {
+                    margin: 0 0 10px 0;
+                }
+            }
+
+            .btn-wrp a {
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                border-radius: 30px;
+                background: #e0e0e0;
+                display: block;
+                text-align: center;
+                color: $black-color;
+                width: 200px;
+                height: 40px;
+                padding: 12px 20px;
+            }
+            h2 {
+                font-size: 48px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                font-weight: 900;
+                letter-spacing: 0.05em;
+            }
+            h5 {
+                font-size: 21px;
+                font-weight: 400;
+                max-width: 320px;
+                line-height: 1.4;
+                margin-bottom: 50px;
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        left: 10%;
+
+        @media screen and (max-width: 1600px) {
+            right: 30px;
+            left: 30px;
+        }
+        @media screen and (max-width: 1300px) {
+            display: none;
+        }
+        .owl-prev {}
+        .owl-next {
+            right: 0;
+            transform: rotate(180deg);
+        }
+        & > button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: url("../../../img/svg/arrow.svg") !important;
+            opacity: .5;
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
